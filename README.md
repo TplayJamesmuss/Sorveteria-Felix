@@ -7,6 +7,7 @@ A história da Sorveteria Félix começou em Itapevi, onde dois irmãos apaixona
 Para nós, é um prazer imenso poder atender você, nosso cliente, oferecendo um ambiente acolhedor e um atendimento de excelência. Venha nos visitar e descubra a delícia dos nossos sorvetes naturais. Estamos sempre prontos para tornar seu dia mais doce e refrescante!
 
 ## 📧 Contato
+Segunda a sexta das 08 às 18hs, e sábado das 08 às 12hs.
 
 - **Endereço**: R. Pandiá Calógeras, 241 - Liberdade, São Paulo - SP, 01525-020
 - **Telefone**: (11) 95467-7474
