@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorveteria Felix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SORVETERIA FELIX 🍦</h1>
+      
+    </header>
+
+    <nav>
+        <ul>
+            <a href="index.html">Sobre Nós</a>
+            <a href="menu.html">Menu</a>
+            <a href="contato.html">Contato</a>
+        
+        </ul>
+    </nav>
+
+    <section id="sobre">
+        <div class="sobre-conteudo">
+          <img src="logo.png" alt="Logo da Sorveteria Félix" />
+          <div class="texto">
+            <h2>Quem somos?</h2>
+            <p>A Sorveteria Félix é um estabelecimento especializado em sorvetes e frutas naturais, feitos com pedaços de frutas frescas. Nosso compromisso é oferecer produtos de alta qualidade, preparados com ingredientes selecionados para proporcionar uma experiência única e refrescante. Acreditamos que o sorvete deve ser não apenas delicioso, mas também saudável e nutritivo, por isso priorizamos frutas de verdade em nossas receitas.</p>
+            <p> A história da Sorveteria Félix começou em Itapevi, onde dois irmãos apaixonados por sorvete decidiram unir forças para criar um negócio que refletisse seu amor por sabores naturais e autênticos. Com o sucesso e a aceitação dos clientes, mudamos nossa localização para o vibrante bairro da Liberdade, em São Paulo, um local que valoriza a diversidade e a cultura, assim como nós.</p>
+            <p> Para nós, é um prazer imenso poder atender você, nosso cliente, oferecendo um ambiente acolhedor e um atendimento de excelência. Venha nos visitar e descubra a delícia dos nossos sorvetes naturais. Estamos sempre prontos para tornar seu dia mais doce e refrescante!</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <section class="mapa">
+            <h1>VENHA NOS CONHECER! 📍</h1>
+            <div class="mapa-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1271629696002!2d-46.63587112501735!3d-23.56387597879806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5998b4d0b707%3A0x8110ca1a1828b0c1!2sSorveteria%20Felix!5e0!3m2!1spt-BR!2sbr!4v1746358937490!5m2!1spt-BR!2sbr" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+        <p>&copy; 2025 Sorveteria do Félix. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('aparecer');
+              observer.unobserve(entry.target); 
+            }
+          });
+        }, {
+          threshold: 0.2 
+        });
+      
+        const sobre = document.querySelector('.sobre-conteudo');
+        observer.observe(sobre);
+      </script>
+</body>
+</html>
