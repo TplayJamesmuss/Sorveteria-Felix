@@ -1,8 +1,8 @@
-# 🍨 Bem-vindo à Sorveteria do Félix!
+# 🍨 Bem-vindo à Sorveteria Felix!
 
-A Sorveteria Félix é um estabelecimento especializado em sorvetes e frutas naturais, feitos com pedaços de frutas frescas. Nosso compromisso é oferecer produtos de alta qualidade, preparados com ingredientes selecionados para proporcionar uma experiência única e refrescante. Acreditamos que o sorvete deve ser não apenas delicioso, mas também saudável e nutritivo, por isso priorizamos frutas de verdade em nossas receitas.
+A Sorveteria Felix é um estabelecimento especializado em sorvetes e frutas naturais, feitos com pedaços de frutas frescas. Nosso compromisso é oferecer produtos de alta qualidade, preparados com ingredientes selecionados para proporcionar uma experiência única e refrescante. Acreditamos que o sorvete deve ser não apenas delicioso, mas também saudável e nutritivo, por isso priorizamos frutas de verdade em nossas receitas.
 
-A história da Sorveteria Félix começou em Itapevi, onde dois irmãos apaixonados por sorvete decidiram unir forças para criar um negócio que refletisse seu amor por sabores naturais e autênticos. Com o sucesso e a aceitação dos clientes, mudamos nossa localização para o vibrante bairro da Liberdade, em São Paulo, um local que valoriza a diversidade e a cultura, assim como nós.
+A história da Sorveteria Felix começou em Itapevi, onde dois irmãos apaixonados por sorvete decidiram unir forças para criar um negócio que refletisse seu amor por sabores naturais e autênticos. Com o sucesso e a aceitação dos clientes, mudamos nossa localização para o vibrante bairro da Liberdade, em São Paulo, um local que valoriza a diversidade e a cultura, assim como nós.
 
 Para nós, é um prazer imenso poder atender você, nosso cliente, oferecendo um ambiente acolhedor e um atendimento de excelência. Venha nos visitar e descubra a delícia dos nossos sorvetes naturais. Estamos sempre prontos para tornar seu dia mais doce e refrescante!
 
