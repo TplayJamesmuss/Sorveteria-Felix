@@ -1,123 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<script src="script.js"></script>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorveteria Felix</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-      .container-img{
-        width: 350px;
-        height: 200px;
-        position: relative;
-        transition: 1s;
-        border-radius: 15px;
-        overflow: hidden;
-      }
-      .container-img img
-      {
-        width: 100%;
-        transition: 1s;
-        position: absolute;
-      }
-      .container-img img:hover{
-        transform: scale(2.10);
-      }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorveteria Felix</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .container-img {
+      width: 350px;
+      height: 200px;
+      position: relative;
+      transition: 1s;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .container-img img {
+      width: 100%;
+      transition: 1s;
+      position: absolute;
+    }
+
+    .container-img img:hover {
+      transform: scale(2.10);
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>SORVETERIA FELIX 🍦</h1>
-    </header>
+  <header>
+    <h1>SORVETERIA FELIX 🍦</h1>
+  </header>
 
-    <nav>
-        <ul>
-            <a href="index.html">Sobre Nós</a>
-            <a href="menu.html">Menu</a>
-            <a href="contato.html">Contato</a>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <a href="index.html">SOBRE NÓS</a>
+      <a href="menu.html">MENU</a>
+      <a href="contato.html">CONTATO</a>
+    </ul>
+  </nav>
 
-    <section class="menu">
-        <h2>Nosso Menu de Sabores</h2>
-        <div class="sabores-container">
-          <!-- Sabores -->
-          <div class="sabor-card">
-            <img src="chocolate.jpg" alt="Sorvete de Chocolate" class="zoom-img" />
-            <h3>Chocolate</h3>
-            <p>R$ 3,00</p>
-          </div>
-          <div class="sabor-card">
-            <img src="morango.jpg" alt="Sorvete de Morango" class="zoom-img" />
-            <h3>Morango</h3>
-            <p>R$ 3,00</p>
-          </div>
-          <div class="sabor-card">
-            <img src="creme.jpg" alt="Sorvete de creme" class="zoom-img" />
-            <h3>Creme</h3>
-            <p>R$ 2,80</p>
-          </div>
-          <div class="sabor-card">
-            <img src="limao.jpg" alt="Sorvete de Limão" class="zoom-img" />
-            <h3>Limão</h3>
-            <p>R$ 3,00</p>
-          </div>
-          <div class="sabor-card">
-            <img src="amendoim.jpg" alt="Sorvete de Amendoim" class="zoom-img" />
-            <h3>Amendoim</h3>
-            <p>R$ 3,00</p>
-          </div>
-          <div class="sabor-card">
-            <img src="coco.jpg" alt="Sorvete de Coco" class="zoom-img" />
-            <h3>Coco</h3>
-            <p>R$ 3,00</p>
-          </div>
-          <div class="sabor-card">
-            <img src="leite.jpg" alt="Sorvete de Leite" class="zoom-img" />
-            <h3>Leite Condensado</h3>
-            <p>R$ 3,00</p>
-          </div>
-          <div class="sabor-card">
-            <img src="chiclete.jpg" alt="Sorvete de Chiclete" class="zoom-img" />
-            <h3>Chiclete</h3>
-            <p>R$ 3,20</p>
-          </div>
-          <div class="sabor-card">
-            <img src="maracuja.jpg" alt="Sorvete de Maracujá" class="zoom-img" />
-            <h3>Maracujá</h3>
-            <p>R$ 3,00</p>
-          </div>
-          <div class="sabor-card">
-            <img src="uva.jpg" alt="Sorvete de Uva" class="zoom-img" />
-            <h3>Uva</h3>
-            <p>R$ 3,00</p>
-          </div>
-          <div class="sabor-card">
-            <img src="milhoverde.jpg" alt="Sorvete de Milho Verde" class="zoom-img" />
-            <h3>Milho Verde</h3>
-            <p>R$ 3,00</p>
-          </div>
+  <section class="menu">
+    <h2>MENU DE SABORES</h2>
+    <div class="sabores-container" id="sabores-lista">
+      <!-- Os cards serão inseridos via JS -->
+    </div>
+
+    <h3 style="margin-top:40px;">🛒 Carrinho</h3>
+    <ul id="carrinho-lista"></ul>
+    <p id="carrinho-total"><strong>Total:</strong> R$ 0,00</p>
+  </section>
+
+  <script>
+
+    // Lista de sabores
+    // Cada sabor é um objeto com nome, título, preço e imagem
+    const sabores = [
+      { nome: "chocolate", titulo: "Chocolate", preco: 3.00, img: "chocolate.jpg" },
+      { nome: "morango", titulo: "Morango", preco: 3.00, img: "morango.jpg" },
+      { nome: "creme", titulo: "Creme", preco: 2.80, img: "creme.jpg" },
+      { nome: "limao", titulo: "Limão", preco: 3.00, img: "limao.jpg" },
+      { nome: "amendoim", titulo: "Amendoim", preco: 3.00, img: "amendoim.jpg" },
+      { nome: "coco", titulo: "Coco", preco: 3.00, img: "coco.jpg" },
+      { nome: "leite", titulo: "Leite Condensado", preco: 3.00, img: "leite.jpg" },
+      { nome: "chiclete", titulo: "Chiclete", preco: 3.20, img: "chiclete.jpg" },
+      { nome: "maracuja", titulo: "Maracujá", preco: 3.00, img: "maracuja.jpg" },
+      { nome: "uva", titulo: "Uva", preco: 3.00, img: "uva.jpg" },
+      { nome: "milhoverde", titulo: "Milho Verde", preco: 3.00, img: "milhoverde.jpg" }
+    ];
+
+    const carrinho = [];
+
+    function renderSabores() {
+      const container = document.getElementById('sabores-lista');
+      container.innerHTML = '';
+      sabores.forEach((sabor, idx) => {
+        container.innerHTML += `
+        <div class="sabor-card">
+          <img src="${sabor.img}" alt="Sorvete de ${sabor.titulo}" class="zoom-img" style="cursor:pointer;" onclick="adicionarCarrinho(${idx})" title="Clique para adicionar ao carrinho"/>
+          <h3>${sabor.titulo}</h3>
+          <p>R$ ${sabor.preco.toFixed(2).replace('.', ',')}</p>
         </div>
-      </section>
-    
-    <footer>
-        <p>&copy; 2025 Sorveteria Felix. Todos os direitos reservados.</p>
-    </footer>
+      `;
+      });
+    }
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('aparecer');
-              observer.unobserve(entry.target); 
-            }
-          });
-        }, {
-          threshold: 0.2 
-        });
-      
-        const sobre = document.querySelector('.sobre-conteudo');
-        observer.observe(sobre);
-      </script>
+    function renderCarrinho() {
+      const lista = document.getElementById('carrinho-lista');
+      const total = document.getElementById('carrinho-total');
+      lista.innerHTML = '';
+      let soma = 0;
+      carrinho.forEach((item, idx) => {
+        soma += item.preco;
+        lista.innerHTML += `<li>${item.titulo} - R$ ${item.preco.toFixed(2).replace('.', ',')} <button onclick="removerCarrinho(${idx})">Remover</button></li>`;
+      });
+      total.innerHTML = `<strong>Total:</strong> R$ ${soma.toFixed(2).replace('.', ',')}`;
+    }
+
+    window.adicionarCarrinho = function (idx) {
+      carrinho.push(sabores[idx]);
+      renderCarrinho();
+    };
+
+    window.removerCarrinho = function (idx) {
+      carrinho.splice(idx, 1);
+      renderCarrinho();
+    };
+
+    renderSabores();
+    renderCarrinho();
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Sorveteria Felix. Todos os direitos reservados.</p>
+  </footer>
+
 </body>
+
 </html>
