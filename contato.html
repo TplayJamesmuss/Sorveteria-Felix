@@ -1,63 +1,268 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorveteria Felix</title>
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body>
-    <header>
-        <h1>SORVETERIA FELIX 🍦</h1>
-    </header>
+<script src="script.js"></script>
 
-    <nav>
-        <ul>
-            <a href="index.html">Sobre Nós</a>
-            <a href="menu.html">Menu</a>
-            <a href="contato.html">Contato</a>
-        </ul>
-    </nav>
-    
-        <section class="contato">
-            <h2>Entre em Contato Conosco!</h2>
-            <p>Estamos sempre prontos para atender você! Se tiver alguma dúvida ou sugestão, entre em contato conosco.
-              Atendimento de segunda a sexta das 08 às 18hs, e sábado das 08 às 12hs.
-            </p>
-            <p>📞<b>Telefone:</b> (11) 95467-7474</p>
-            <p>📧<b>Email:</b> reisjoseivaldo@gmail.com</p>
-          <a href="https://www.instagram.com/sorveteriafelix/" target="_blank" rel="noopener noreferrer">
-            <p><b>📷Instagram:</b> @sorveteriafelix</p>
-          </a> 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('aparecer');
-              observer.unobserve(entry.target); 
-            }
-          });
-        }, {
-          threshold: 0.2 
-        });
-      
-        const sobre = document.querySelector('.sobre-conteudo');
-        observer.observe(sobre);
-      </script>
-      <footer>
-        <section class="mapa">
-            <h1>VENHA NOS CONHECER! 📍</h1>
-            <div class="mapa-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1271629696002!2d-46.63587112501735!3d-23.56387597879806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5998b4d0b707%3A0x8110ca1a1828b0c1!2sSorveteria%20Felix!5e0!3m2!1spt-BR!2sbr!4v1746358937490!5m2!1spt-BR!2sbr" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </section>
-        <p>&copy; 2025 Sorveteria Felix. Todos os direitos reservados.</p>
-    </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorveteria Felix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <style>
+    /* Reset e fonte geral */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdfaf6;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    p {
+      text-align: justify;
+      size: 14px;
+      line-height: 1.6;
+    }
+
+
+    /* Navegação */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1EB4EA;
+      padding: 12px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    /* Seções */
+    section {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #1EB4EA;
+      margin-bottom: 10px;
+    }
+
+    /* Estilo do seletor de modo escuro e claro */
+    body.light-mode {
+      background-color: #fdfaf6;
+      color: #333;
+    }
+
+    body.dark-mode {
+      background-color: #333;
+      color: #fdfaf6;
+    }
+
+    #theme-toggle {
+      background-color: #1EB4EA;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #theme-toggle:hover {
+      background-color: #ffeb3b;
+    }
+
+    /* Estilo do formulário de contato */
+    .formulario-contato {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #1EB4EA;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #333;
+      transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #1EB4EA;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .btn-enviar {
+      background-color: #f8b400;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+
+    .btn-enviar:hover {
+      background-color: #363228;
+    }
+
+    /* Estilo para modo escuro - formulário */
+    body.dark-mode .form-group label {
+      color: #1EB4EA;
+    }
+
+    body.dark-mode .form-group input,
+    body.dark-mode .form-group textarea {
+      background-color: #555;
+      color: #fdfaf6;
+      border-color: #666;
+    }
+
+    body.dark-mode .form-group input:focus,
+    body.dark-mode .form-group textarea:focus {
+      border-color: #1EB4EA;
+      background-color: #666;
+    }
+
+    body.dark-mode .btn-enviar {
+      background-color: #f8b400;
+    }
+
+    body.dark-mode .btn-enviar:hover {
+      background-color: #e6a000;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #f8b400;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 20px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        margin: 5px 10px;
+      }
+
+      .formulario-contato {
+        padding: 10px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <h1>SORVETERIA FELIX 🍦</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <a href="index.html">SOBRE NÓS</a>
+      <a href="menu.html">MENU</a>
+      <a href="contato.html">CONTATO</a>
+    </ul>
+  </nav>
+
+  <section class="contato">
+    <h2>FALE CONOSCO!</h2>
+    <p>Estamos sempre prontos para atender você! Se tiver alguma dúvida ou sugestão, entre em contato conosco.
+      Atendimento de segunda a sexta das 08 às 18hs, e sábado das 08 às 12hs.
+    </p>
+    <p>📍<b>Endereço:</b> R. Pandiá Calógeras, 241 - Liberdade</p>
+    <p>📧<b>Email:</b> reisjoseivaldo@gmail.com</p>
+    <a href="https://www.instagram.com/sorveteriafelix/" class="float-instagram" target="_blank"
+      rel="noopener noreferrer">
+      <i class="fa fa-instagram my-float"></i>
+    </a>
+
+    <a href="https://api.whatsapp.com/send?phone=5511954677474&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+      class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
 </body>
+
+
+<footer class="footer">
+  <h3>Envie sua mensagem e responderemos em breve</h3>
+  <section>
+    <div class="formulario-contato">
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" required placeholder="Digite sua mensagem aqui..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+  <p>&copy; 2025 Sorveteria Felix. Todos os direitos reservados.</p>
+</footer>
+
 </html>
