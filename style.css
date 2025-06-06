@@ -143,7 +143,7 @@ footer {
   color: white;
   text-align: center;
   padding: 30px 20px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 /* Mapa */
@@ -168,7 +168,118 @@ footer {
   .mapa-container {
     max-width: 700px;
     margin: 0 auto;
+    width: 100%;
     border: 2px solid #ffcc80;
     border-radius: 10px;
     overflow: hidden;
   }
+
+  .sabores-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    width: 100%; 
+    margin: auto;
+  }
+
+/* Estilo do seletor de modo escuro e claro */
+    body.light-mode {
+    background-color: #fdfaf6;
+    color: #333;
+  }
+  
+  body.dark-mode {
+    background-color: #333;
+    color: #fdfaf6;
+  }
+  
+  #theme-toggle {
+    background-color: #1EB4EA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #theme-toggle:hover {
+    background-color: #ffeb3b;
+  }
+
+/* Botão flutuante do WhatsApp */
+  .float{
+ position:fixed;
+ width:60px;
+ height:60px;
+ bottom:40px;
+ right:40px;
+ background-color:#25d366;
+ color:#FFF;
+ border-radius:50px;
+ text-align:center;
+  font-size:30px;
+ box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+ margin-top:16px;
+ margin-top: 0;
+}
+/* Botão flutuante do Instagram */
+.float, .float-instagram {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  right: 40px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+
+.float {
+  bottom: 40px;
+  background-color: #25d366;
+  color: #FFF;
+}
+
+.float-instagram {
+  bottom: 110px;
+  background-color: #E4405F;
+  color: #FFF;
+}
+
+.float-instagram:hover {
+  background: #c13584;
+}
+
+/*Alinhamento do carrino*/
+ul {
+  list-style-type: none;
+  display:flex;
+  justify-content: space-between; 
+  padding: 16px;
+}
+
+#carrinho-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  max-width: 400px;
+  word-break: break-word;
+  display: block;      
+}
+
+#carrinho-lista li {
+  margin-bottom: 8px;
+  display: block;
+}
